@@ -55,7 +55,7 @@ public class PhotoQuiz {
 		hello = createImage(image);
 		quizWindow.add(hello);
 		quizWindow.pack();
-		String two = JOptionPane.showInputDialog("Does this look like you?");
+		String two = JOptionPane.showInputDialog("Is this the beach?");
 		if (two.equals("Yes")) {
 			JOptionPane.showMessageDialog(null, "Correct");
 		} else {
