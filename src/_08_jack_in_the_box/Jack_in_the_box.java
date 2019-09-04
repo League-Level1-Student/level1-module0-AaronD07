@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 
 public class Jack_in_the_box implements ActionListener {
 	JButton button = new JButton();
+	int x = 0;
 	private void showPicture(String fileName) {
 		try {
 			JLabel imageLabel = createLabelImage(fileName);
@@ -21,7 +22,6 @@ public class Jack_in_the_box implements ActionListener {
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.add(imageLabel);
 			frame.setVisible(true);
-frame.add(button);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,16 +55,23 @@ frame.add(button);
 
 	public void showButton() {
 JFrame frame = new JFrame();
-	
+		frame.setVisible(true);
+		frame.add(button);
+	button.addActionListener(this);
 	
 }
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if (button.equals()) {
+		JButton buttonPressed = (JButton) e.getSource();
+		if (buttonPressed.equals(button)){
+			
+			x=x+1;
+			if (x== 5) {
 			showPicture("jackInTheBox.jpeg");
 			playSound("homer-woohoo.wav");
-	}
-
+		}
+		// TODO Auto-generated method stub
+		
+		}
 	}}
